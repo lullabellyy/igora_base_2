@@ -214,28 +214,22 @@ function forms() {
  document.addEventListener('DOMContentLoaded', () => {
 	forms();
  });
- document
-.getElementById("contactForm")
-.addEventListener("submit", async function(e){
+ document.getElementById("contactForm").addEventListener("submit", async function(e){
+  e.preventDefault()
 
- e.preventDefault()
+  const name = this.name.value
+  const phone = this.phone.value
 
- const name = this.name.value
- const phone = this.phone.value
-
- const res = await fetch("/api/send",{
-  method:"POST",
-  headers:{
-   "Content-Type":"application/json"
-  },
-  body: JSON.stringify({
-   name,
-   phone
+  const res = await fetch("/api/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, phone })
   })
- })
 
- if(res.ok){
-  alert("Заявка отправлена")
- }
-
+  if(res.ok){
+    alert("Заявка отправлена!")
+    this.reset()
+  } else {
+    alert("Ошибка при отправке")
+  }
 })
