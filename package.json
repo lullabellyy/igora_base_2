@@ -1,0 +1,24 @@
+{
+  "name": "igora_base_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lullabellyy/igora_base_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lullabellyy/igora_base_2/issues"
+  },
+  "homepage": "https://github.com/lullabellyy/igora_base_2#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.99.2"
+  }
+}
